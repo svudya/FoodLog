@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="food-log">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Food Log </title>
+        
+    </head>
+    <body ng-controller="mainController">
+        <label for="user">Employee ID</label>
+        <select id="user" ng-repeat="empId in empIds">
+            <option value=empId>{{empId}}</option>
+        </select>
+        
+        <label for="food">Food Choice</label>
+        <select id="food" ng-repeat="choice in foodChoice">
+            <option value=choice>{{choice}}</option>
+        </select>
+        
+        <label for="addons">Additional Options</label>
+        <select id="addons" ng-repeat="addOn in addOns">
+            <option value={{addOn}}>{{addOn}}</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+        <button type="button">View Consolidated Order</button>
+        <button type="button">View Report</button>
+    
+        <script src="./bower_components/angular/angular.min.js"></script>
+        <script src="./bower_components/firebase/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyCDYPSj1TdbzK2BQQeZlvF33zAsk70h748",
+            authDomain: "foodlog-503d6.firebaseapp.com",
+            databaseURL: "https://foodlog-503d6.firebaseio.com",
+            storageBucket: "foodlog-503d6.appspot.com",
+            messagingSenderId: "294015123718"
+          };
+          firebase.initializeApp(config);
+        </script>
+        <script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>

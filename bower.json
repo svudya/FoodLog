@@ -1,0 +1,13 @@
+{
+  "name": "food-log",
+  "authors": [
+    "Sai Deepak"
+  ],
+  "description": "An app to manage food consumption",
+  "main": "index.html",
+  "keywords": [
+    "food"
+  ],
+  "license": "MIT",
+  "homepage": "index.html"
+}
